@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RealPeopleVerifyFailed">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView
+        android:id="@+id/ivFailed"
+        android:layout_width="142dp"
+        android:layout_height="118dp"
+        android:layout_below="@+id/llTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:src="@drawable/icon_verify_failed" />
+
+    <TextView
+        android:id="@+id/tvFailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivFailed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="认证失败"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvFailedReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFailed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="认证失败"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnVerifyAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFailedReason"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/ocr_blue_button_selector"
+        android:text="重新认证"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</RelativeLayout>

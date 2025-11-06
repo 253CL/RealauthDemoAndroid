@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+}
+def cfg = rootProject.ext
+android {
+    compileSdk cfg.android.compileSdk
+    defaultConfig {
+        applicationId "anz.pyj.az1112"
+        minSdk cfg.android.minSdk
+        targetSdk cfg.android.targetSdk
+        versionCode cfg.android.versionCode
+        versionName cfg.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config {
+            storeFile file('../app/shanyan_sy123456.jks')
+            storePassword 'sy123456'
+            keyAlias 'shanyan'
+            keyPassword 'sy123456'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'SERVER_URL', '"https://wsapi.253.com/"')
+            buildConfigField('String', 'GET_TOKEN_SERVER', '"https://wsapi.253.com/plat_app/"')
+            buildConfigField('String', 'APPID', '"8ED74hJy"')
+            buildConfigField('String', 'APPKEY', '"jMYbLSzs"')
+            manifestPlaceholders = [
+                    APPID: "***"
+            ]
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'SERVER_URL', '"https://wsapi.253.com/"')
+            buildConfigField('String', 'GET_TOKEN_SERVER', '"https://wsapi.253.com/plat_app/"')
+            buildConfigField('String', 'APPID', '"8ED74hJy"')
+            buildConfigField('String', 'APPKEY', '"jMYbLSzs"')
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "SDKDemo_V${versionName}_${variant.buildType.name}_${releaseTime()}.apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+dependencies {
+    api fileTree(include: ['*.aar'], dir: 'libs')
+    api cfg.library.retrofit2
+    api cfg.library.okhttp3
+    api cfg.library.okhttp3logging
+    api cfg.library.constraintlayout
+    api cfg.library.convertergson
+    api cfg.library.appcompat
+
+}

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">实人认证Demo</string>
+    <string name="signature">© ️2021</string>
+    <string name="input_name">请输入姓名</string>
+    <string name="input_card_no">请输入身份证</string>
+    <string name="input_empty">姓名与身份证不能为空</string>
+    <string name="note_blink">请眨眨眼</string>
+    <string name="note_nod">请点点头</string>
+    <string name="note_mouth">请张张嘴</string>
+    <string name="note_yaw">请摇摇头</string>
+    <string name="time_out">动作超时</string>
+    <string name="online_alive_detect_camera_permission">本功能需要相机权限！</string>
+    <string name="online_alive_detect_storage_permission">本功能需要存储权限！</string>
+    <string name="online_alive_detect_card_ocr_front_tip">将身份证人像页置于此区域，避免晃动和反光</string>
+    <string name="online_alive_detect_card_ocr_back_tip">将身份证（背面）置于此区域，避免晃动和反光</string>
+    <string name="online_alive_detect_id_card_front_take_photo">身份证人像面拍摄</string>
+    <string name="online_alive_detect_id_card_back_take_photo">身份证国徽面拍摄</string>
+    <string name="online_alive_detect_upload_id_card">上传证件</string>
+    <string name="online_alive_detect_layout_string_album">相册</string>
+    <string name="online_alive_detect_layout_string_light">手电筒</string>
+    <string name="online_alive_detect_layout_take_photo_standard">拍摄标准</string>
+    <string name="online_alive_detect_layout_standard_take_photo">标准拍摄</string>
+    <string name="online_alive_detect_layout_border_missing">边框缺失</string>
+    <string name="online_alive_detect_layout_photo_blur">照片模糊</string>
+    <string name="online_alive_detect_layout_light_strong">闪光强烈</string>
+    <string name="online_alive_detect_adjust_id_card_front">适当调整方向，将人像面置于虚线框内</string>
+    <string name="online_alive_detect_adjust_id_card_back">适当调整方向，将国徽面置于虚线框内</string>
+    <string name="cl_online_alive_detect_preview_timeout">操作超时</string>
+</resources>

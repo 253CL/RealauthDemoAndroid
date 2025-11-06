@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="primaryColor" format="color" />
+        <attr name="primaryColorDark" format="color" />
+        <attr name="isOpened" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OCRCameraLayout">
+        <attr name="contentView" format="reference" />
+        <attr name="topTipsView" format="reference" />
+        <attr name="leftDownView" format="reference" />
+        <attr name="rightUpView" format="reference" />
+        <attr name="bottomButtonView" format="reference" />
+        <attr name="cropButtonView" format="reference" />
+        <attr name="paintColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskView">
+        <!-- 遮罩的颜色 -->
+        <attr name="maskColor" format="reference|color" />
+        <!-- 预览框距离顶部的位置 -->
+        <attr name="previewMarginTop" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="GifImageView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CountTimeProgressView">
+        <attr name="backgroundColorCenter" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderDrawColor" format="color" />
+        <attr name="borderBottomColor" format="color" />
+
+        <attr name="markBallWidth" format="dimension" />
+        <attr name="markBallColor" format="color" />
+        <attr name="markBallFlag" format="boolean" />
+
+        <attr name="startAngle" format="float" />
+        <attr name="clockwise" format="boolean" />
+
+        <attr name="countTime" format="integer" />
+
+        <attr name="textStyle" format="enum">
+            <enum name="jump" value="0" />
+            <enum name="second" value="1" />
+            <enum name="clock" value="2" />
+            <enum name="none" value="3" />
+        </attr>
+
+        <attr name="titleCenterText" format="string" />
+        <attr name="titleCenterColor" format="color" />
+        <attr name="titleCenterSize" format="dimension" />
+    </declare-styleable>
+</resources>

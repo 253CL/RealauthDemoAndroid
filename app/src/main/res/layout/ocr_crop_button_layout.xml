@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cropButtonLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivRotateLeft"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ivRotateLeft"
+        app:layout_constraintTop_toTopOf="@id/ivRotateLeft" />
+
+    <ImageView
+        android:id="@+id/ivRotateLeft"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/left_rotate_ninety_degrees"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvCancel"
+        app:layout_constraintRight_toLeftOf="@id/ivRotateRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRotateRight"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/right_rotate_ninety_degrees"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivRotateLeft"
+        app:layout_constraintRight_toLeftOf="@id/tvConfirm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivRotateRight"
+        app:layout_constraintLeft_toRightOf="@id/ivRotateRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivRotateRight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

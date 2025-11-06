@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.UploadIdCardActivity">
+
+    <include layout="@layout/common_title_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/text_linear_shape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTitle" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="56dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/text_linear_shape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTitle" />
+
+    <ImageView
+        android:id="@+id/ivFront"
+        android:layout_width="36dp"
+        android:layout_height="27dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/icon_upload_front"
+        app:layout_constraintBottom_toBottomOf="@id/viewLine"
+        app:layout_constraintRight_toLeftOf="@id/viewLine"
+        app:layout_constraintTop_toTopOf="@id/viewLine" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="36dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/icon_upload_back_gray"
+        app:layout_constraintBottom_toBottomOf="@id/viewLine"
+        app:layout_constraintLeft_toRightOf="@id/viewLine"
+        app:layout_constraintTop_toTopOf="@id/viewLine" />
+
+    <TextView
+        android:id="@+id/tvFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="上传人像页"
+        android:textColor="#3F75FC"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/ivFront"
+        app:layout_constraintRight_toRightOf="@id/ivFront"
+        app:layout_constraintTop_toBottomOf="@id/ivFront" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivFront"
+        android:layout_marginTop="4dp"
+        android:text="上传国徽页"
+        android:textColor="#B8BDCC"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/ivBack"
+        app:layout_constraintRight_toRightOf="@id/ivBack"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlPhoto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/ocr_white_shape"
+        android:elevation="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine">
+
+        <ImageView
+            android:id="@+id/ivIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/btnTakeAgain"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnTakeAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pale_blue_button_shape"
+            android:text="重新拍摄"
+            android:textColor="#3F75FC"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ocr_blue_button_selector"
+        android:text="下一步"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
