@@ -96,6 +96,7 @@ public class IdCardOcrTestActivity extends Activity {
                     runOnUiThread(() -> mProgressBar.setVisibility(View.GONE));
                     Intent intent = new Intent(IdCardOcrTestActivity.this, IdCardOcrResultActivity.class);
                     intent.putExtra("result", result);
+                    intent.putExtra("authToken", authToken);
                     startActivity(intent);
                     finish();
                 });

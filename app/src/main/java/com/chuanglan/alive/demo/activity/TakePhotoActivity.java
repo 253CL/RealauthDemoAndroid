@@ -199,9 +199,22 @@ public class TakePhotoActivity extends Activity {
     }
 
     private final View.OnClickListener albumButtonOnClickListener = v -> {
-        if (ActivityCompat.checkSelfPermission(getApplicationContext(),
-                Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // Android 13+ 使用 READ_MEDIA_IMAGES
+            if (ActivityCompat.checkSelfPermission(getApplicationContext(),
+                    Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(TakePhotoActivity.this,
+                        new String[]{Manifest.permission.READ_MEDIA_IMAGES},
+                        PERMISSIONS_EXTERNAL_STORAGE);
+                return;
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            // Android 10-12 不需要存储权限，使用分区存储
+            // 直接打开相册
+        } else {
+            // Android 9 及以下使用 READ_EXTERNAL_STORAGE
+            if (ActivityCompat.checkSelfPermission(getApplicationContext(),
+                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(TakePhotoActivity.this,
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         PERMISSIONS_EXTERNAL_STORAGE);

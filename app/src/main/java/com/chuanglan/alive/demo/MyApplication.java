@@ -11,7 +11,7 @@ public class MyApplication extends Application {
         super.onCreate();
         // 设置调试模式，可以输出日志，方便调试，生产环境请关闭此开关
         CLBaseManager.setDebuggable(true);
-        CLBaseManager.setWarnDeprecated(true);
+        //CLBaseManager.setWarnDeprecated(true);
         CLBaseManager.init(getApplicationContext(), BuildConfig.APPID);
     }
 }

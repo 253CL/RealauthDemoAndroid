@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">实人认证Demo</string>
-    <string name="signature">© ️2021</string>
+    <string name="signature">© ️2025</string>
     <string name="input_name">请输入姓名</string>
     <string name="input_card_no">请输入身份证</string>
     <string name="input_empty">姓名与身份证不能为空</string>
@@ -26,4 +26,15 @@
     <string name="online_alive_detect_adjust_id_card_front">适当调整方向，将人像面置于虚线框内</string>
     <string name="online_alive_detect_adjust_id_card_back">适当调整方向，将国徽面置于虚线框内</string>
     <string name="cl_online_alive_detect_preview_timeout">操作超时</string>
+    <!--布局文字-->
+    <string name="face_verify_privacy_titlebar_title">身份验证</string>
+    <string name="face_verify_tip1">拍摄您本人人脸，请保证正对手机，光线充足</string>
+    <string name="face_verify_tip2">1.请确认由本人亲自操作 \n2.请将脸置于提示框内，并按提示完成动作</string>
+    <string name="face_verify_tip3">不能遮挡脸部</string>
+    <string name="face_verify_tip4">不能在昏暗\n逆光下拍摄</string>
+    <string name="face_verify_tip5">不能斜视手机</string>
+    <string name="face_verify_tip6">请勾选协议</string>
+    <string name="face_verify_start">采集本人人脸</string>
+    <string name="face_verify_agree_privacy">我同意</string>
+    <string name="face_verify_privacy_name">认证服务协议</string>
 </resources>

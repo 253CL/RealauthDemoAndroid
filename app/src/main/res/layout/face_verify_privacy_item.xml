@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/face_verify_privacy_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@id/face_verify_privacy_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/face_verify_privacy_rl"
+        android:layout_centerHorizontal="true"
+        android:text="@string/face_verify_tip6"
+        android:textColor="@color/faceVerifyRed"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@id/face_verify_privacy_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@id/face_verify_privacy_checkbox_rootlayout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp">
+
+            <CheckBox
+                android:id="@id/face_verify_privacy_checkbox"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/face_verify_checkbox_bg"
+                android:button="@null"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/face_verify_privacy_text_rootlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/face_verify_privacy_checkbox_rootlayout">
+
+            <TextView
+                android:id="@id/face_verify_privacy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.3"
+                android:text="@string/face_verify_agree_privacy"
+                android:textColor="@color/faceVerifyDark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/face_verify_privacy_text"
+                android:lineSpacingMultiplier="1.3"
+                android:text="@string/face_verify_privacy_name"
+                android:textColor="@color/faceVerifyBlue"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

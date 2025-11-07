@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="face_verify_start" type="id" />
+    <item name="face_verify_titlebar_root" type="id" />
+    <item name="face_verify_titlebar_back_root" type="id" />
+    <item name="face_verify_titlebar_back" type="id" />
+    <item name="face_verify_titlebar_title" type="id" />
+    <item name="face_verify_privacy_rootlayout" type="id" />
+    <item name="face_verify_privacy_checkbox" type="id" />
+    <item name="face_verify_privacy_text_rootlayout" type="id" />
+    <item name="face_verify_privacy_checkbox_rootlayout" type="id" />
+    <item name="face_verify_privacy_text" type="id" />
+    <item name="face_verify_privacy_layout" type="id" />
+    <item name="face_verify_navigationbar_include" type="id" />
+    <item name="face_verify_baseweb_webview" type="id" />
+    <item name="face_verify_privacy_rl" type="id" />
+    <item name="face_verify_privacy_tip" type="id" />
+</resources>

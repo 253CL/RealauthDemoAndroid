@@ -175,7 +175,7 @@ public class CountTimeProgressView extends View implements View.OnClickListener 
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        LogTool.e(TAG, "onDetachedFromWindow");
+        LogTool.d(TAG, "onDetachedFromWindow");
         if (isRunning()) {
             cancelCountTimeAnimation();
         }

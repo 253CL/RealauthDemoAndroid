@@ -175,7 +175,7 @@ public class RealPeopleVerifyActivity extends Activity {
         if (isContinue) {
             startAliveDetected();
         } else {
-            Intent intent = new Intent(this, RealPeopleVerifySuccess.class);
+            Intent intent = new Intent(this, OnlineAliveDetectedSuccessActivity.class);
             startActivity(intent);
             finish();
         }

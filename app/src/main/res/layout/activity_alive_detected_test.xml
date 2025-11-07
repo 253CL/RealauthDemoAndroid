@@ -1,45 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/faceVerifyWhite">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/llTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:elevation="2dp"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/rl_title"
-                android:layout_width="match_parent"
-                android:layout_height="48dp">
-
-                <ImageView
-                    android:id="@+id/img_btn_back"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="16dp"
-                    android:src="@drawable/icon_back_button" />
-
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="身份验证"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </LinearLayout>
+        <include layout="@layout/face_verify_privacy_title" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,8 +17,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="28dp"
-            android:text="拍摄您本人人脸，请保证正对手机，光线充足"
-            android:textColor="#333333"
+            android:text="@string/face_verify_tip1"
+            android:textColor="@color/faceVerifyDark"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -56,15 +26,15 @@
             android:layout_width="169dp"
             android:layout_height="169dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/online_alive_scan" />
+            android:src="@mipmap/face_verify_scan" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="50dp"
-            android:text="1.请确认由本人亲自操作 \n2.请将脸置于提示框内，并按提示完成动作"
-            android:textColor="#333333"
+            android:text="@string/face_verify_tip2"
+            android:textColor="@color/faceVerifyDark"
             android:textSize="15sp" />
 
         <LinearLayout
@@ -79,44 +49,46 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/online_alive1"
+                android:drawableTop="@mipmap/face_verify_tip1"
                 android:drawablePadding="1dp"
                 android:gravity="center"
-                android:text="不能遮挡脸部" />
+                android:text="@string/face_verify_tip3" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/online_alive2"
+                android:drawableTop="@mipmap/face_verify_tip2"
                 android:drawablePadding="1dp"
                 android:gravity="center"
-                android:text="不能在昏暗\n逆光下拍摄" />
+                android:text="@string/face_verify_tip4" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/online_alive3"
+                android:drawableTop="@mipmap/face_verify_tip3"
                 android:drawablePadding="1dp"
                 android:gravity="center"
-                android:text="不能斜视手机" />
+                android:text="@string/face_verify_tip5" />
         </LinearLayout>
 
+        <include layout="@layout/face_verify_privacy_item" />
+
         <Button
-            android:id="@+id/btnStartDetected"
+            android:id="@id/face_verify_start"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/ocr_blue_button_selector"
+            android:background="@color/faceVerifyBlue"
             android:gravity="center"
             android:paddingStart="16dp"
             android:paddingLeft="16dp"
-            android:text="采集本人人脸"
-            android:textColor="#FFFFFFFF"
-            android:textSize="18sp" />
+            android:text="@string/face_verify_start"
+            android:textColor="@color/faceVerifyWhite"
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>

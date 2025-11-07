@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/face_verify_titlebar_root"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:id="@id/face_verify_titlebar_back_root"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@id/face_verify_titlebar_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/face_verify_titlebar_back" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/face_verify_titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/face_verify_privacy_titlebar_title"
+        android:textColor="@color/faceVerifyDark"
+        android:textSize="16sp"
+        android:textStyle="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/face_verify_titlebar_back_root"
+        android:background="@color/faceVerifyStroke" />
+</RelativeLayout>

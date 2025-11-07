@@ -18,4 +18,10 @@
     <color name="color_btn_setting_item_bg_press">#bfbcbc</color>
     <color name="default_dot_bg"> #D3E1F9</color>
     <color name="checked_dot_bg"> #75B3FD</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="faceVerifyWhite">#ffffff</color>
+    <color name="faceVerifyDark">#333333</color>
+    <color name="faceVerifyBlue">#3a68f8</color>
+    <color name="faceVerifyRed">#FF0000</color>
+    <color name="faceVerifyStroke">#d1d2d8</color>
 </resources>
